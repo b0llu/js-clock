@@ -110,3 +110,10 @@ body {
   height: 35%;
   background-color: black;
 }
+
+.date {
+  display: flex;
+  height: 25vh;
+  justify-content: center;
+  align-items: flex-end;
+}

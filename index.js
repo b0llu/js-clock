@@ -3,6 +3,7 @@ setInterval(setClock, 1000);
 const hourHand = document.querySelector("[data-hour-hand]");
 const minuteHand = document.querySelector("[data-minute-hand]");
 const secondHand = document.querySelector("[data-second-hand]");
+const liveDate = document.querySelector("#date");
 
 function setClock() {
   const currentDate = new Date();
@@ -19,4 +20,11 @@ function setRotation(element, rotationRatio) {
   element.style.setProperty("--rotation", rotationRatio * 360);
 }
 
-setClock()
+function date() {
+  const latestDate = new Date();
+  liveDate.innerHTML = latestDate;
+  console.log(latestDate);
+}
+
+setClock();
+date();

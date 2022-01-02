@@ -21,9 +21,11 @@ function setRotation(element, rotationRatio) {
 }
 
 function date() {
-  const latestDate = new Date();
-  liveDate.innerHTML = latestDate;
-  console.log(latestDate);
+  let latestDate = new Date().getDate();
+  let latestMonth = new Date().getMonth();
+  let latestYear = new Date().getFullYear()
+  const fullYear = latestDate + ' - ' + (latestMonth + 1) + ' - ' + latestYear
+  liveDate.innerHTML = fullYear;
 }
 
 setClock();
